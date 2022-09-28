@@ -16,19 +16,15 @@ const Home = () => {
       })
       .catch((err) => {
         setError(err);
-        console.error(err);
       });
   }, [error]);
 
   const loadMoreStarships = () => {
-    client
-      .get(next)
-      .then((response) => {
-        starships.push(...response.data.results);
-        setStarships(starships);
-        setNext(response.data.next);
-      })
-      .catch((err) => console.error(err));
+    client.get(next).then((response) => {
+      starships.push(...response.data.results);
+      setStarships(starships);
+      setNext(response.data.next);
+    });
   };
 
   return (

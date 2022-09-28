@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getStarshipById } from "../lib/client";
 import { useParams } from "react-router-dom";
+import { getStarshipById } from "../lib/client";
 import DetailCard from "../components/DetailCard";
 
 const Starship = () => {

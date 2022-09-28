@@ -13,3 +13,7 @@ export const getAllStarships = () => client.get("/starships");
 
 // Endpoint to get starship by its ID
 export const getStarshipById = (id) => client.get(`/starships/${id}`);
+
+// Endpoint to search starships
+export const searchStarship = (term) =>
+  client.get(`/starships/?search=${term}`);

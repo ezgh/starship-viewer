@@ -1,8 +1,17 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 export default function Navbar() {
+  const [searchParams] = useSearchParams();
+  const searchParamTerm = searchParams.get("term") || "";
+  const [term, setTerm] = useState(searchParams.get("term"));
+
+  useEffect(() => {
+    setTerm(searchParamTerm);
+  }, [searchParamTerm]);
+
   return (
     <Disclosure as="header" className="bg-gray-800">
       <>
@@ -21,24 +30,28 @@ export default function Navbar() {
             </div>
             <div className="relative z-0 flex flex-1 items-center justify-center px-2 sm:absolute sm:inset-0">
               <div className="w-full sm:max-w-xs">
-                <label htmlFor="search" className="sr-only">
-                  Search
-                </label>
-                <div className="relative">
-                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <MagnifyingGlassIcon
-                      className="h-5 w-5 text-gray-400"
-                      aria-hidden="true"
+                <form action="/search">
+                  <label htmlFor="search" className="sr-only">
+                    Search
+                  </label>
+                  <div className="relative">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                      <MagnifyingGlassIcon
+                        className="h-5 w-5 text-gray-400"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <input
+                      id="search"
+                      name="term"
+                      className="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 text-white text-sm placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:placeholder-gray-500 focus:outline-none focus:ring-white sm:text-sm"
+                      placeholder="Search"
+                      type="search"
+                      value={term}
+                      onChange={(e) => setTerm(e.target.value)}
                     />
                   </div>
-                  <input
-                    id="search"
-                    name="search"
-                    className="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:placeholder-gray-500 focus:outline-none focus:ring-white sm:text-sm"
-                    placeholder="Search"
-                    type="search"
-                  />
-                </div>
+                </form>
               </div>
             </div>
           </div>

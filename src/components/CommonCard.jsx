@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const CommonCard = ({ url, name, model, hyperdriveRating }) => {
   let starshipRoute = "";
-  if (url.startsWith("https://swapi.dev/api/"))
-    starshipRoute = url.split("https://swapi.dev/api/")[1];
+  if (url.startsWith("https://swapi.dev/api"))
+    starshipRoute = url.split("https://swapi.dev/api")[1];
   return (
     <li className="m-5 p-5 group">
       <Link
