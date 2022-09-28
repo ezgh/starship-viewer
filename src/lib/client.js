@@ -10,3 +10,6 @@ export const client = axios.create({
 
 // Endpoint to list all starships
 export const getAllStarships = () => client.get("/starships");
+
+// Endpoint to get starship by its ID
+export const getStarshipById = (id) => client.get(`/starships/${id}`);

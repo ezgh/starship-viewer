@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
-export default function Header() {
+export default function Navbar() {
   return (
     <Disclosure as="header" className="bg-gray-800">
       <>
@@ -9,11 +10,13 @@ export default function Header() {
           <div className="relative flex h-16 justify-between">
             <div className="relative z-10 flex px-2 lg:px-0">
               <div className="flex flex-shrink-0 items-center">
-                <img
-                  className="block h-8 w-auto"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Star_Wars_Yellow_Logo.svg/1268px-Star_Wars_Yellow_Logo.svg.png?20140504224300"
-                  alt="Your Company"
-                />
+                <Link to="/">
+                  <img
+                    className="block h-8 w-auto"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Star_Wars_Yellow_Logo.svg/1268px-Star_Wars_Yellow_Logo.svg.png?20140504224300"
+                    alt="Your Company"
+                  />
+                </Link>
               </div>
             </div>
             <div className="relative z-0 flex flex-1 items-center justify-center px-2 sm:absolute sm:inset-0">
