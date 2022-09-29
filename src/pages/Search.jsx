@@ -51,7 +51,11 @@ const Search = () => {
       )}
       {next ? (
         <div className="grid w-screen place-items-center">
-          <Button text="Load more" onClick={loadMoreStarships} />
+          <Button
+            text="Load more"
+            onClick={loadMoreStarships}
+            classes={"mb-10 items-center"}
+          />
         </div>
       ) : null}
     </main>

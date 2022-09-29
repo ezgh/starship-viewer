@@ -1,10 +1,14 @@
-import { isActualNumber } from "../lib/services";
+import { useNavigate } from "react-router-dom";
+import { getStarshipImageByRoute, isActualNumber } from "../lib/services";
+import Button from "./Button";
 
-const DetailCard = ({ starship }) => {
+const DetailCard = ({ route, starship }) => {
+  const navigate = useNavigate();
+  const image = getStarshipImageByRoute(route);
   return (
     <div>
       {starship ? (
-        <div className="relative bg-gray-800 py-16">
+        <div className="relative bg-gray-800 py-8 lg:py-16">
           <div
             className="absolute inset-x-0 top-0 hidden h-1/2 bg-gray-800 lg:block"
             aria-hidden="true"
@@ -20,7 +24,7 @@ const DetailCard = ({ starship }) => {
                   <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
                     <img
                       className="rounded-3xl object-cover object-center shadow-2xl"
-                      src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80"
+                      src={image}
                       alt=""
                     />
                   </div>
@@ -124,6 +128,13 @@ const DetailCard = ({ starship }) => {
               </div>
             </div>
           </div>
+          <span className="grid w-screen place-items-center">
+            <Button
+              text="Go back"
+              onClick={() => navigate(-1)}
+              classes={"my-6"}
+            />
+          </span>
         </div>
       ) : null}
     </div>

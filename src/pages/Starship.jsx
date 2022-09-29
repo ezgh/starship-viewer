@@ -25,7 +25,7 @@ const Starship = () => {
           Error, starship with {params.id} id is not found.
         </p>
       ) : (
-        <DetailCard starship={starship} />
+        <DetailCard route={`/starships/${params.id}/`} starship={starship} />
       )}
     </main>
   );
