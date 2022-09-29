@@ -99,7 +99,7 @@ const DetailCard = ({ starship }) => {
                     />
                   </svg>
                 </div>
-                <div className="relative mx-auto max-w-md space-y-6 py-12 px-4 sm:max-w-3xl sm:py-16 sm:px-6 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0">
+                <div className="relative max-w-md space-y-6 py-12 px-4 sm:max-w-3xl sm:py-16 sm:px-6 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0">
                   <h2 className="text-4xl font-bold tracking-tight text-white">
                     {starship.name}
                   </h2>

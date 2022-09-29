@@ -6,7 +6,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 export default function Navbar() {
   const [searchParams] = useSearchParams();
   const searchParamTerm = searchParams.get("term") || "";
-  const [term, setTerm] = useState(searchParams.get("term"));
+  const [term, setTerm] = useState(searchParamTerm);
 
   useEffect(() => {
     setTerm(searchParamTerm);
