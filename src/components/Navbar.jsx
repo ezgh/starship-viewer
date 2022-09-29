@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   const [searchParams] = useSearchParams();
   const searchParamTerm = searchParams.get("term") || "";
   const [term, setTerm] = useState(searchParamTerm);
@@ -11,6 +13,11 @@ export default function Navbar() {
   useEffect(() => {
     setTerm(searchParamTerm);
   }, [searchParamTerm]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?term=${term}`);
+  };
 
   return (
     <Disclosure as="header" className="bg-gray-800">
@@ -30,7 +37,7 @@ export default function Navbar() {
             </div>
             <div className="relative z-0 flex flex-1 items-center justify-center px-2 sm:absolute sm:inset-0">
               <div className="w-full sm:max-w-xs">
-                <form action="/search">
+                <form action="#" onSubmit={handleSearch}>
                   <label htmlFor="search" className="sr-only">
                     Search
                   </label>
