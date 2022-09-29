@@ -112,17 +112,40 @@ const DetailCard = ({ route, starship }) => {
                   </h3>
                   <ul className="text-xl text-white">
                     {isActualNumber(starship.passengers) ? (
-                      <li>Passengers: {starship.passengers}</li>
+                      <li>
+                        Passengers:{" "}
+                        <span className="font-extralight">
+                          {starship.passengers}{" "}
+                        </span>
+                      </li>
                     ) : null}
                     {isActualNumber(starship.max_atmosphering_speed) ? (
                       <li>
                         Max Atmosphering Speed:{" "}
-                        {starship.max_atmosphering_speed}
+                        <span className="font-extralight">
+                          {" "}
+                          {starship.max_atmosphering_speed}{" "}
+                        </span>
                       </li>
                     ) : null}
-                    <li>Manufacturer: {starship.manufacturer}</li>
-                    <li>Crew: {starship.crew}</li>
-                    <li>Cargo Capacity: {starship.cargo_capacity}</li>
+                    <li>
+                      Manufacturer:
+                      <span className="font-extralight">
+                        {" "}
+                        {starship.manufacturer}{" "}
+                      </span>
+                    </li>
+                    <li>
+                      Crew:{" "}
+                      <span className="font-extralight"> {starship.crew} </span>
+                    </li>
+                    <li>
+                      Cargo Capacity:
+                      <span className="font-extralight">
+                        {" "}
+                        {starship.cargo_capacity}{" "}
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>

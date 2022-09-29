@@ -9,7 +9,9 @@ import Search from "./pages/Search";
 function App() {
   return (
     <main className="bg-gray-800">
-      <Navbar />
+      <span className="sticky top-0 z-50">
+        <Navbar />
+      </span>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/starships/:id" element={<Starship />} />
