@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 const MainLayout = () => {
   return (
     <main
-      className="bg-gray-800"
+      className="bg-zinc-800"
       style={{
         backgroundImage: "url(/images/stardust.png)",
       }}

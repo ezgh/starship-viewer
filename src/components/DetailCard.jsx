@@ -10,23 +10,23 @@ const DetailCard = ({ route, starship }) => {
     <div>
       {starship ? (
         <div
-          className="relative bg-gray-800 py-8 lg:py-16"
+          className="relative bg-zinc-800 py-8 lg:py-16"
           style={{
             backgroundImage: "url(/images/stardust.png)",
           }}
         >
           <div
-            className="absolute inset-x-0 top-0 hidden h-1/2 bg-gray-800 lg:block"
+            className="absolute inset-x-0 top-0 hidden h-1/2 bg-zinc-800 lg:block"
             aria-hidden="true"
             style={{
               backgroundImage: "url(/images/stardust.png)",
             }}
           />
-          <div className="mx-auto max-w-7xl bg-gray-800 lg:bg-transparent lg:px-8">
+          <div className="mx-auto max-w-7xl bg-zinc-800 lg:bg-transparent lg:px-8">
             <div className="lg:grid lg:grid-cols-12">
               <div className="relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16">
                 <div
-                  className="absolute inset-x-0 h-1/2 bg-gray-800 lg:hidden"
+                  className="absolute inset-x-0 h-1/2 bg-zinc-800 lg:hidden"
                   aria-hidden="true"
                 />
                 <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
@@ -34,14 +34,14 @@ const DetailCard = ({ route, starship }) => {
                     <img
                       className="rounded-3xl object-cover object-center shadow-2xl"
                       src={image}
-                      alt=""
+                      alt="Image of the starship"
                     />
                   </div>
                 </div>
               </div>
 
               <div
-                className="relative bg-gray-800 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl lg:border-2 lg:border-starWarsYellow"
+                className="relative bg-zinc-800 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl lg:border-2 lg:border-starWarsYellow"
                 style={{
                   backgroundImage: "url(/images/stardust.png)",
                 }}

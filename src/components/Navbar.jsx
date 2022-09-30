@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="header"
-      className="bg-gray-800"
+      className="bg-zinc-800"
       style={{
         backgroundImage: "url(/images/stardust.png)",
       }}
@@ -35,8 +35,8 @@ export default function Navbar() {
                 <Link to="/">
                   <img
                     className="block h-12 w-auto py-1"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Star_Wars_Yellow_Logo.svg/1268px-Star_Wars_Yellow_Logo.svg.png?20140504224300"
-                    alt="Your Company"
+                    src="/images/logo.png"
+                    alt="Star Wars Logo"
                   />
                 </Link>
               </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
                     <input
                       id="search"
                       name="term"
-                      className="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 text-white text-sm placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:placeholder-gray-500 focus:outline-none focus:ring-white sm:text-sm"
+                      className="block w-full rounded-md border border-transparent bg-zinc-700 py-2 pl-10 pr-3 text-white text-sm placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:placeholder-gray-500 focus:outline-none focus:ring-white sm:text-sm"
                       placeholder="Search"
                       type="search"
                       value={term}
