@@ -20,7 +20,13 @@ export default function Navbar() {
   };
 
   return (
-    <Disclosure as="header" className="bg-gray-800">
+    <Disclosure
+      as="header"
+      className="bg-gray-800"
+      style={{
+        backgroundImage: "url(/images/stardust.png)",
+      }}
+    >
       <>
         <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8">
           <div className="relative flex h-16 justify-between">
@@ -28,7 +34,7 @@ export default function Navbar() {
               <div className="flex flex-shrink-0 items-center">
                 <Link to="/">
                   <img
-                    className="block h-8 w-auto"
+                    className="block h-12 w-auto py-1"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Star_Wars_Yellow_Logo.svg/1268px-Star_Wars_Yellow_Logo.svg.png?20140504224300"
                     alt="Your Company"
                   />

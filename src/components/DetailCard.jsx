@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { getStarshipImageByRoute, isActualNumber } from "../lib/services";
+
 import Button from "./Button";
 
 const DetailCard = ({ route, starship }) => {
@@ -8,10 +9,18 @@ const DetailCard = ({ route, starship }) => {
   return (
     <div>
       {starship ? (
-        <div className="relative bg-gray-800 py-8 lg:py-16">
+        <div
+          className="relative bg-gray-800 py-8 lg:py-16"
+          style={{
+            backgroundImage: "url(/images/stardust.png)",
+          }}
+        >
           <div
             className="absolute inset-x-0 top-0 hidden h-1/2 bg-gray-800 lg:block"
             aria-hidden="true"
+            style={{
+              backgroundImage: "url(/images/stardust.png)",
+            }}
           />
           <div className="mx-auto max-w-7xl bg-gray-800 lg:bg-transparent lg:px-8">
             <div className="lg:grid lg:grid-cols-12">
@@ -31,7 +40,12 @@ const DetailCard = ({ route, starship }) => {
                 </div>
               </div>
 
-              <div className="relative bg-gray-800 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl lg:border-2 lg:border-starWarsYellow">
+              <div
+                className="relative bg-gray-800 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl lg:border-2 lg:border-starWarsYellow"
+                style={{
+                  backgroundImage: "url(/images/stardust.png)",
+                }}
+              >
                 <div
                   className="absolute inset-0 hidden overflow-hidden rounded-3xl lg:block"
                   aria-hidden="true"
