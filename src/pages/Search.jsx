@@ -25,7 +25,7 @@ const Search = () => {
       setNext(response.data.next);
       setLoading(false);
     });
-  }, []);
+  }, [term]);
 
   const loadMoreStarships = () => {
     client.get(next).then((response) => {
